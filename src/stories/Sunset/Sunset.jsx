@@ -45,8 +45,6 @@ export const Sunset = ({ daylight, children, ...props }) => {
   return (
     <div
       style={{
-        width: '100%',
-        height: '100%',
         padding: 40,
         background: `linear-gradient(
           rgb(${r1},${g1},${b1}),
