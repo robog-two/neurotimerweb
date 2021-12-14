@@ -1,6 +1,5 @@
 import React from 'react';
 import { range } from 'airbnb-prop-types';
-import './button.css';
 
 const sunsetGradient = [
   [204, 255, 251], // 0%
