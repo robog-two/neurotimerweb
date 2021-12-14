@@ -46,8 +46,8 @@ export const ProgressBar = ({ daylight, children, ...props }) => {
   return (
     <div
       style={{
-        height: 51.64,
-        borderRadius: 51.64,
+        height: 17.21,
+        borderRadius: 17.21,
         backgroundColor: 'black',
       }}
     >
@@ -55,8 +55,8 @@ export const ProgressBar = ({ daylight, children, ...props }) => {
         style={{
           height: '100%',
           width: `${props.progress}%`,
-          minWidth: 51.64,
-          borderRadius: 51.64,
+          minWidth: 17.21,
+          borderRadius: 17.21,
           background: `linear-gradient(
             to right,
             rgb(${r1},${g1},${b1}),

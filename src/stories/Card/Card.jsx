@@ -5,13 +5,13 @@ export const Card = ({ dark, children, ...props }) => {
   return (
     <div
       style={{
-        minWidth: 54.331,
-        minHeight: 54.331,
-        borderRadius: 54.331,
-        paddingTop: 82.42,
-        paddingBottom: 78.03,
-        paddingLeft: 122.43,
-        paddingRight: 122.43,
+        minWidth: 18.11,
+        minHeight: 18.11,
+        borderRadius: 18.11,
+        paddingTop: 27.47,
+        paddingBottom: 26.01,
+        paddingLeft: 40.81,
+        paddingRight: 40.81,
         color: dark ? 'white' : 'black',
         background: `linear-gradient(
           157deg,
