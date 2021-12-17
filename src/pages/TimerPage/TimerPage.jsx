@@ -7,7 +7,7 @@ import { Sunset } from '../../stories/Sunset/Sunset';
 export const TimerPage = () => {
   return (
     <Sunset>
-      <Card>
+      <Card timer={true}>
         <HeaderSubheader />
         <ProgressBar />
       </Card>
