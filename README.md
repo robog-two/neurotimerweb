@@ -4,7 +4,7 @@ This is a quick little project where I have created several of the components fo
 
 ## To start
 
-Install yarn if you haven't already using [these instructions](https://yarnpkg.com/getting-started/install).
+Install yarn if you haven't already using `npm i -g yarn`.
 
 Then, run this in your terminal:
 
