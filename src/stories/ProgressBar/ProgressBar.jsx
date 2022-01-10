@@ -44,28 +44,44 @@ export const ProgressBar = ({ daylight, children, ...props }) => {
   }
 
   return (
-    <div
-      style={{
-        height: 17.21,
-        borderRadius: 17.21,
-        backgroundColor: 'black',
-      }}
-    >
+    <div>
+      <p
+        style={{
+          lineHeight: 1.25,
+          fontSize: 12.4,
+          margin: 0,
+          fontFamily: 'Sarala, sans-serif',
+          textAlign: 'center',
+        }}
+      >
+        You're {props.progress}% finished with your itinerary.
+      </p>
       <div
         style={{
-          height: '100%',
-          width: `${props.progress}%`,
-          minWidth: 17.21,
+          height: 17.21,
           borderRadius: 17.21,
-          background: `linear-gradient(
-            to right,
-            rgb(${r1},${g1},${b1}),
-            rgb(${r2},${g2},${b2})
-            )`,
+          marginLeft: 39.47,
+          marginRight: 40.81,
+          marginBottom: 0,
+          marginTop: 6.90,
+          backgroundColor: 'black',
         }}
-      ></div>
+      >
+        <div
+          style={{
+            height: '100%',
+            width: `${props.progress}%`,
+            minWidth: 17.21,
+            borderRadius: 17.21,
+            background: `linear-gradient(
+              to right,
+              rgb(${r1},${g1},${b1}),
+              rgb(${r2},${g2},${b2})
+              )`,
+          }}
+        ></div>
+      </div>
     </div>
-
   );
 };
 
