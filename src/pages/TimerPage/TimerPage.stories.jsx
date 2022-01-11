@@ -7,6 +7,14 @@ export default {
   component: TimerPage,
 };
 
-const Template = (args) => <TimerPage />;
+const Template = (args) => <TimerPage {...args} />;
 
-export const Mockup = Template.bind({});
+export const Dark = Template.bind({});
+Dark.args = {
+  dark: true,
+};
+
+export const Light = Template.bind({});
+Light.args = {
+  dark: false,
+};
