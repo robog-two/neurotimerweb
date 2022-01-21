@@ -10,8 +10,10 @@ export const TimerPage = ({ dark, ...props }) => {
   return (
     <Sunset>
       <Card timer={true} dark={dark}>
-        <HeaderSubheader dark={dark}/>
-        <UpcomingTasks dark={dark}/>
+        <div>
+          <HeaderSubheader dark={dark}/>
+          <UpcomingTasks dark={dark}/>
+        </div>
         <ProgressBar />
       </Card>
     </Sunset>

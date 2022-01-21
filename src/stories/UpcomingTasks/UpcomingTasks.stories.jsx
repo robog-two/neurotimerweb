@@ -6,7 +6,7 @@ export default {
   title: 'UI/General/UpcomingTasks',
   component: UpcomingTasks,
   argTypes: {
-    dark: { control: 'boolean' }
+    tasks: { control: 'none' }
   },
 };
 
