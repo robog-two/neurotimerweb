@@ -6,7 +6,7 @@ export default {
   title: 'UI/General/UpcomingTasks',
   component: UpcomingTasks,
   argTypes: {
-    tasks: { control: 'none' }
+    task: { control: 'none' },
   },
 };
 

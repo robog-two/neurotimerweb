@@ -43,7 +43,9 @@ export const UpcomingTasks = ({ tasks, ...props }) => {
                   style={{
                     display: 'block',
                   }}
-                >{task.timeToComplete}</span>
+                >
+                  {Math.floor(task.timeToComplete/60)}:{Math.floor(task.timeToComplete % 60).toString().padStart(2, '0')}
+                </span>
             ))
           }
         </div>
@@ -69,6 +71,16 @@ export const UpcomingTasks = ({ tasks, ...props }) => {
           }
         </div>
       </div>
+      {(tasks.length == 0) ? (
+          <span
+          style={{
+            marginTop: 6.98,
+            lineHeight: 1,
+            fontFamily: 'Sarala, sans-serif',
+            fontSize: '35px',
+          }}
+        >That's it for today!</span>
+        ) : ''}
     </div>
   );
 };
@@ -76,7 +88,7 @@ export const UpcomingTasks = ({ tasks, ...props }) => {
 UpcomingTasks.propTypes = {
   tasks: PropTypes.arrayOf(
     PropTypes.shape({
-      timeToComplete: PropTypes.string,
+      timeToComplete: PropTypes.number,
       title: PropTypes.string,
     })
   ),
@@ -85,11 +97,11 @@ UpcomingTasks.propTypes = {
 UpcomingTasks.defaultProps = {
   tasks: [
     {
-      timeToComplete: '5:00',
+      timeToComplete: 300,
       title: 'Break'
     },
     {
-      timeToComplete: '25:00',
+      timeToComplete: 1500,
       title: 'Pre-Calculus'
     },
   ]
