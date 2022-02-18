@@ -11,6 +11,7 @@ import { range, nonNegativeNumber } from 'airbnb-prop-types';
 
 export const TimerPage = ({ dark, timeLeft, currentTask, tasksToday, ...props }) => {
   const totalTime = tasksToday[currentTask].timeToComplete
+  const currentTaskName = tasksToday[currentTask].title
   if (timeLeft > totalTime) timeLeft = totalTime
   const daylight = (timeLeft / totalTime) * 100
 
@@ -35,7 +36,7 @@ export const TimerPage = ({ dark, timeLeft, currentTask, tasksToday, ...props })
       <TimerText dark={darkSun} timeLeft={timeLeft} />
       <Card timer={true} dark={dark}>
         <div>
-          <HeaderSubheader dark={dark}/>
+          <HeaderSubheader header={currentTaskName} subheader={`${Math.floor(totalTime / 60)} minute sprint.`} dark={dark}/>
           <UpcomingTasks tasks={tasksLeft} dark={dark}/>
         </div>
         <ProgressBar progress={progress} />
