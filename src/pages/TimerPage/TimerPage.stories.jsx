@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { TimerPage } from './TimerPage';
+import TimerPage from './TimerPage';
 
 export default {
   title: 'UI/PageMockups/TimerPage',

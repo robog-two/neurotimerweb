@@ -6,16 +6,16 @@ export const Card = ({ dark, children, timer, ...props }) => {
     <div
       style={{
         minWidth: 18.11,
-        minHeight: timer ? '57.15vh' : 18.11,
+        minHeight: timer ? '55.15vh' : 'calc(100vh - 80px)',
         borderRadius: 18.11,
         paddingTop: 27.47,
         paddingBottom: 26.01,
         paddingLeft: 0,
         paddingRight: 0,
         color: dark ? 'white' : 'black',
-        display: timer ? 'flex' : 'block',
-        flexDirection: timer ? 'column' : undefined,
-        justifyContent: timer ? 'space-between' : undefined,
+        display: 'flex',
+        flexDirection: 'column',
+        justifyContent: 'space-between',
         background: `linear-gradient(
           157deg,
           ${dark ? '#2c2c2c' : '#ffffff'},

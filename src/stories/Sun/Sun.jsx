@@ -19,7 +19,7 @@ export const Sun = ({ daylight, dark, ...props }) => {
         backgroundPositionX: 'center',
         width: 'max-available',
         height: 155.5,
-        marginTop: 20.4,
+        //marginTop: 20.4,
         overflow: 'hidden',
       }}
       ref={container}

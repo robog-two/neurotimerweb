@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-export const UpcomingTasks = ({ tasks, ...props }) => {
+export const UpcomingTasks = ({ tasks, title, ...props }) => {
   return (
     <div
       style={{
@@ -16,7 +16,7 @@ export const UpcomingTasks = ({ tasks, ...props }) => {
           lineHeight: '13.33px',
         }}
       >
-        Your Upcoming Tasks
+        {title}
       </span>
       <div
         style={{
@@ -56,7 +56,6 @@ export const UpcomingTasks = ({ tasks, ...props }) => {
             marginTop: 6.98,
             lineHeight: '27.17px',
             fontFamily: 'Sarala, sans-serif',
-            fontSize: '21.33px',
             verticalAlign: 'middle',
           }}
         >
@@ -65,13 +64,15 @@ export const UpcomingTasks = ({ tasks, ...props }) => {
                 <span
                   style={{
                     display: 'block',
+                    color: task.title.includes('Break') ? 'gray' : 'white',
+                    fontSize: task.title.includes('Break') ? '10.67px' : '21.33px'
                   }}
                 >{task.title}</span>
             ))
           }
         </div>
       </div>
-      {(tasks.length == 0) ? (
+      {(tasks.length === 0) ? (
           <span
           style={{
             marginTop: 6.98,
@@ -79,13 +80,14 @@ export const UpcomingTasks = ({ tasks, ...props }) => {
             fontFamily: 'Sarala, sans-serif',
             fontSize: '35px',
           }}
-        >That's it for today!</span>
+        >{title === 'Up Next' ? "That's it for today!" : "Add a task below."}</span>
         ) : ''}
     </div>
   );
 };
 
 UpcomingTasks.propTypes = {
+  title: PropTypes.string,
   tasks: PropTypes.arrayOf(
     PropTypes.shape({
       timeToComplete: PropTypes.number,
@@ -95,6 +97,7 @@ UpcomingTasks.propTypes = {
 };
 
 UpcomingTasks.defaultProps = {
+  title: 'Up Next',
   tasks: [
     {
       timeToComplete: 300,
